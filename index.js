@@ -13,7 +13,12 @@ generateBtn.addEventListener('click', (event) => {
         answer.textContent = 'Please enter a positive number.';
         return;
     }
+    if (amount > max) {
+        answer.textContent = 'The number must be between 1 - 100';
+        return;
+    }
     const randomNum = [];
+
     
     for (let i = 0; i < amount; i++) {
           randomNum.push(Math.floor(Math.random() * max) + min);
